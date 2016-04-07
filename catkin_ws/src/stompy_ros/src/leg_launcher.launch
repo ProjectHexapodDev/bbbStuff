@@ -1,0 +1,54 @@
+<launch>
+  <node name="sensor" pkg="leg_test" ns="/leg1/knee/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg1/thigh/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg1/hip/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg1/compliant/" type="sensor.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg1/knee/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg1/thigh/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg1/hip/" type="pid_loop.py" output="screen"/>
+
+  <node name="sensor" pkg="leg_test" ns="/leg2/knee/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg2/thigh/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg2/hip/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg2/compliant/" type="sensor.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg2/knee/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg2/thigh/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg2/hip/" type="pid_loop.py" output="screen"/>
+
+  <node name="sensor" pkg="leg_test" ns="/leg3/knee/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg3/thigh/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg3/hip/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg3/compliant/" type="sensor.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg3/knee/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg3/thigh/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg3/hip/" type="pid_loop.py" output="screen"/>
+
+  <node name="sensor" pkg="leg_test" ns="/leg4/knee/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg4/thigh/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg4/hip/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg4/compliant/" type="sensor.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg4/knee/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg4/thigh/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg4/hip/" type="pid_loop.py" output="screen"/>
+
+  <node name="sensor" pkg="leg_test" ns="/leg5/knee/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg5/thigh/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg5/hip/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg5/compliant/" type="sensor.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg5/knee/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg5/thigh/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg5/hip/" type="pid_loop.py" output="screen"/>
+
+  <node name="sensor" pkg="leg_test" ns="/leg6/knee/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg6/thigh/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg6/hip/" type="sensor.py" output="screen"/>
+  <node name="sensor" pkg="leg_test" ns="/leg6/compliant/" type="sensor.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg6/knee/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg6/thigh/" type="pid_loop.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/leg6/hip/" type="pid_loop.py" output="screen"/>
+
+  <node name="rpm" pkg="leg_test" ns="/engine/" type="sensor.py" output="screen"/>
+  <node name="temp" pkg="leg_test" ns="/engine/" type="sensor.py" output="screen"/>
+  <node name="pid_loop" pkg="leg_test" ns="/engine/" type="pid_loop.py" output="screen"/>
+
+</launch>

@@ -1,0 +1,17 @@
+<launch>
+  <machine name="console" address="console" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" default="true" />
+
+  <machine name="engine_controller" address="engine_controller" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" default="true" />
+
+  <machine name="leg1" address="leg1" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+  <machine name="leg2" address="leg2" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+  <machine name="leg3" address="leg3" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+  <machine name="leg4" address="leg4" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+  <machine name="leg5" address="leg5" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+  <machine name="leg6" address="leg6" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+
+  <machine name="hip1" address="hip1" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+  <machine name="hip2" address="hip2" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+  <machine name="hip3" address="hip3" ros-root="$(env ROS_ROOT)" ros-package-path="$(env ROS_PACKAGE_PATH)" />
+
+</launch>
