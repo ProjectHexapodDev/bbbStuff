@@ -6,10 +6,10 @@
         <!-- Try to figure out how to put this in a file -->
         <!-- <include file="$(find stompy_ros)/leg.xml" ns="leg1" pass_all_args="true"/> -->
 
-        <node pkg="stompy_ros" type="sensor" name="sensor" required="true" ns="knee" >
-        <node pkg="stompy_ros" type="sensor" name="sensor" required="true" ns="compliant_link" >
-        <node pkg="stompy_ros" type="pid_loop" name="pid_loop" required="true" ns="knee" >
-        <node pkg="stompy_ros" type="pid_loop" name="pid_loop" required="true" ns="compliant_link" >
+        <node pkg="stompy_ros" type="sensor" name="sensor" required="true" ns="knee" />
+        <node pkg="stompy_ros" type="sensor" name="sensor" required="true" ns="compliant_link" />
+        <node pkg="stompy_ros" type="pid_loop" name="pid_loop" required="true" ns="knee" />
+        <node pkg="stompy_ros" type="pid_loop" name="pid_loop" required="true" ns="compliant_link" />
     </group>
 
 
