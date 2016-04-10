@@ -1,8 +1,7 @@
 <launch>
-  <group name="stompy">
     <include file="$(find stompy_ros)/$(env ROBOT).machine" />
 
-    <group name="leg1" ns="leg1">
+    <group ns="leg1">
         <!-- Try to figure out how to put this in a file -->
         <!-- <include file="$(find stompy_ros)/leg.xml" ns="leg1" pass_all_args="true"/> -->
 
@@ -21,5 +20,4 @@
 
     <!-- The navigation stack and associated parameters -->
     <!-- <include file="$(find 2dnav_pr2)/move_base/move_base.xml" /> -->
-  </group>
 </launch>
