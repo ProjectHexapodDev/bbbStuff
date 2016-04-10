@@ -1,6 +1,6 @@
 <launch>
   <group name="stompy">
-    <include file="$(find stompy_ros)/$(env ROBOT).machine" />
+    <include file="$(find stompy_ros)/src/$(env ROBOT).machine" />
 
     <group name="leg1" ns="leg1">
         <!-- Try to figure out how to put this in a file -->
