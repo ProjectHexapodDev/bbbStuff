@@ -1,5 +1,5 @@
-!/usr/bin/env bash
+#!/usr/bin/env sh
 
 roscd 
-source devel/setup.bash
+source setup.bash
 exec "$@"
