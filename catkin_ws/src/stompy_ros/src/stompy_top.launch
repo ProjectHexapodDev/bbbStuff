@@ -1,5 +1,4 @@
 <launch>
-  <group name="stompy">
     <include file="$(find stompy_ros)/src/$(env ROBOT).machine" />
 
     <group ns="leg1">
