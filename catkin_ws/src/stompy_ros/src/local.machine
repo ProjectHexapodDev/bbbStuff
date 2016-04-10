@@ -1,0 +1,17 @@
+<launch>
+  <machine name="console" address="localhost"  default="true" env-loader="$(find stompy_ros)/src/env.sh" />
+
+  <machine name="engine_controller" address="localhost"  default="true" env-loader="$(find stompy_ros)/src/env.sh" />
+
+  <machine name="leg1" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="leg2" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="leg3" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="leg4" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="leg5" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="leg6" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+
+  <machine name="hip1" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="hip2" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="hip3" address="localhost"  env-loader="$(find stompy_ros)/src/env.sh" />
+
+</launch>

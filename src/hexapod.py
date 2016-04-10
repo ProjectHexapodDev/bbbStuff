@@ -13,11 +13,11 @@ aboutZ = np.array([0., 0., 1.])
 # All magic numbers from Gui's "Simulation Export Drawings"
 class Hexapod(object):
   def __init__(self):
-    self.core = Link( "body"
-                    , 1823.41  # kg
-                    , mmmm( 499.7  # kgm^2
-                          , 0.019, 3253.0
-                          , -172.0, -0.096, 3049.0))
+    self.core = Link( name="body"
+                    , mass=1823.41  # kg
+                    , massMoments=mmmm( 499.7  # kgm^2
+                                      , 0.019, 3253.0
+                                      , -172.0, -0.096, 3049.0))
     hipSink = -0.495  # m
     endWidth = 0.5842
     midWidth = 0.6858
@@ -32,32 +32,32 @@ class Hexapod(object):
     self.makeLeg(np.array([front, endWidth, hipSink]), pi/2.).setParent(self.core)
 
   def makeLeg(self, hipCenterOfRotation, zRotation):
-    yaw = Joint( "hipYaw"
-               , aboutZ
-               , hipCenterOfRotation
-               , makeXYZRotationMatrix(0., 0., zRotation))
+    yaw = Joint( name="hipYaw"
+               , axis=aboutZ
+               , centerOfRotationcoordinateRotationOffset=hipCenterOfRotation
+               , coordinateRotation=makeXYZRotationMatrix(0., 0., zRotation))
     yaw.setChild(self.makeHip())
     return yaw
 
   def makeHip(self):
-    hip = Link( "hip"
-              , 28.231  # kg
-              , mmmm( 0.337  #kgm^2
+    hip = Link( name="hip"
+              , mass=28.231  # kg
+              , massMoments=mmmm( 0.337  #kgm^2
                     , 0., 0.327
                     , 0.026, 0., 0.417)
-              , np.array([0.11156, 0., 0.006375]))  # m
+              , offset=np.array([0.11156, 0., 0.006375]))  # m
     joint = Joint("hipPitch", aboutY, np.array([0.16784, 0., -0.04601]))  # m
     joint.setParent(hip)
     joint.setChild(self.makeThigh())
     return hip
 
   def makeThigh(self):
-    thigh = Link( "thigh"
-                , 64.053  # kg
-                , mmmm( 1.334  #kgm^2
+    thigh = Link( name="thigh"
+                , mass=64.053  # kg
+                , massMoments=mmmm( 1.334  #kgm^2
                       , 0., 10.92
                       , -0.34, 0., 10.62)
-                , np.array([0.69035, 0., 0.12141]))  # m
+                , offset=np.array([0.69035, 0., 0.12141]))  # m
     joint = Joint("kneePitch", aboutY, np.array([0.68125, 0., -0.12141]))  # m
     joint.setParent(thigh)
     joint.setChild(self.makeKnee())
