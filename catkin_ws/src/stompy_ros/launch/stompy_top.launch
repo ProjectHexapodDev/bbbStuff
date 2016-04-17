@@ -1,3 +1,11 @@
+<!-- 
+Environment variables:
+    Run on local machine:
+        export ROBOT=local
+    Run on Stompy:
+    export ROBOT=stompy
+ -->
+ 
 <launch>
     <include file="$(find stompy_ros)/src/$(env ROBOT).machine" />
 
