@@ -16,8 +16,12 @@
 # Sublime Project
 *.sublime-project
 *.sublime-workspace
+
+# ROS catkin workspace generated fils
 catkin_ws/.catkin_workspace
 catkin_ws/build/
 catkin_ws/devel/
 catkin_ws/src/CMakeLists.txt
 
+# ROS
+.stompy_top.launch.swp
