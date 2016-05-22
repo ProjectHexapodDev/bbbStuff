@@ -36,36 +36,18 @@
 ## Simple sensor demo that published std_msgs/Strings messages
 ## to the 'chatter' topic
 
-from math import pi
-
 import rospy
-import tf
-
-from adc_utilities import * 
-from utilities import *
-
-from geometry_msgs.msg import Quaternion
+from std_msgs.msg import String
 
 def sensor():
-    pub = rospy.Publisher('angle', Quaternion, queue_size=10)
+    pub = rospy.Publisher('chatter', String, queue_size=10)
     rospy.init_node('sensor', anonymous=True)
     rate = rospy.Rate(10) # 10hz
     while not rospy.is_shutdown():
-        rawStringPot = readAin(AIN4, KNEE_RANGE)
-        rospy.loginfo(rawStringPot)
-
-	eulerAngle = strPot_to_angle(rawStringPot, KNEE_POT_RANGE, KNEE_ANGLE_RANGE)
-	rospy.loginfo(eulerAngle)
-
-	q = tf.transformations.quaternion_from_euler(0, 0, eulerAngle)
-        quaternionAngle = Quaternion(*q)
-	rospy.loginfo(quaternionAngle)
-
-        pub.publish(quaternionAngle)
+        hello_str = "hello world %s" % rospy.get_time()
+        rospy.loginfo(hello_str)
+        pub.publish(hello_str)
         rate.sleep()
-
-KNEE_POT_RANGE = (0, 4096)
-KNEE_ANGLE_RANGE = (0,180)
 
 if __name__ == '__main__':
     try:
