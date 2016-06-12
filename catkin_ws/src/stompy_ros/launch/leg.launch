@@ -9,10 +9,10 @@ Launch all sensor and pid_loop nodes for a leg
     <arg name="legname" />
 
     <group ns="$(arg legname)">
-        <node pkg="stompy_ros" type="sensor.py" name="sensor" required="true" ns="knee" />
-        <node pkg="stompy_ros" type="sensor.py" name="sensor" required="true" ns="compliant_link" />
-        <node pkg="stompy_ros" type="pid_loop.py" name="pid_loop" required="true" ns="knee" />
-        <node pkg="stompy_ros" type="pid_loop.py" name="pid_loop" required="true" ns="compliant_link" />
+        <node machine="$(arg legname)" pkg="stompy_ros" type="sensor.py" name="sensor" required="true" ns="knee" />
+        <node machine="$(arg legname)"  pkg="stompy_ros" type="sensor.py" name="sensor" required="true" ns="compliant_link" />
+        <node  machine="$(arg legname)" pkg="stompy_ros" type="pid_loop.py" name="pid_loop" required="true" ns="knee" />
+        <node  machine="$(arg legname)" pkg="stompy_ros" type="pid_loop.py" name="pid_loop" required="true" ns="compliant_link" />
     </group>
 
 </launch>
