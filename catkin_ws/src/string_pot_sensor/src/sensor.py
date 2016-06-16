@@ -39,7 +39,7 @@
 from math import pi
 
 import rospy
-import sensor_msgs
+from sensor_msgs.msg import JointState
 
 from adc_utilities import * 
 from utilities import *
@@ -53,11 +53,13 @@ def sensor():
     while not rospy.is_shutdown():
         rawStringPot = readAin(AIN4, KNEE_RANGE)
         rospy.loginfo(rawStringPot)
-
-	radianAngle = strPot_to_angle(rawStringPot, KNEE_POT_RANGE, KNEE_ANGLE_RANGE)
-	rospy.loginfo(radianAngle)
-
-        pub.publish(radianAngle)
+	
+        radianAngle = strPot_to_angle(rawStringPot, KNEE_POT_RANGE, KNEE_ANGLE_RANGE)
+        rospy.loginfo(radianAngle)
+        
+        msg = JointState() 
+        msg.position = radianAngle
+        pub.publish(msg)
         rate.sleep()
 
 KNEE_POT_RANGE = (0, 4096)

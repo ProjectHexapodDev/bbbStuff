@@ -22,7 +22,7 @@ def strPot_to_angle(strPot, potRange, pistonLengthRange, offsets):
   pistonLengthSpan = pistonLengthRange[1] - pistonLengthRange[0]
   pistonLength = (((strPot - potRange[0]) * potSpan)/ pistonLengthSpan ) + pistonLengthRange[0]
   # law of cosines
-  return math.acos((offsets[0]**2 + offsets[1]**2 - pistonLength)/(2 * offsets[0] * offsets[1])) 
+  return math.acos((offsets[0]**2 + offsets[1]**2 - pistonLength**2)/(2 * offsets[0] * offsets[1])) 
 
 def readAin(pinName, jointRange):
   raw = readInt(pinName)
