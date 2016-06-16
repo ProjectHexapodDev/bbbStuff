@@ -47,14 +47,17 @@ from utilities import *
 from geometry_msgs.msg import Quaternion
 
 def sensor():
-    pub = rospy.Publisher('JointState', sensor_msgs.JointState, queue_size=10)
+    import sys
+    print(sys.version)
+
+    pub = rospy.Publisher('JointState', JointState, queue_size=10)
     rospy.init_node('StringPotSensor', anonymous=True)
     rate = rospy.Rate(100) # 100hz
     while not rospy.is_shutdown():
         rawStringPot = readAin(AIN4, KNEE_RANGE)
         rospy.loginfo(rawStringPot)
 	
-        radianAngle = strPot_to_angle(rawStringPot, KNEE_POT_RANGE, KNEE_ANGLE_RANGE)
+        radianAngle = strPot_to_angle(rawStringPot, KNEE_POT_RANGE, KNEE_PISTON_RANGE, KNEE_OFFSETS)
         rospy.loginfo(radianAngle)
         
         msg = JointState() 
@@ -63,7 +66,9 @@ def sensor():
         rate.sleep()
 
 KNEE_POT_RANGE = (0, 4096)
-KNEE_ANGLE_RANGE = (0,180)
+KNEE_PISTON_RANGE = (10,30)
+KNEE_OFFSETS = (30, 5)
+
 
 if __name__ == '__main__':
     try:
