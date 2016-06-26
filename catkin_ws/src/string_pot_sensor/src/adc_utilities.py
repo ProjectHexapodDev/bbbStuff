@@ -27,7 +27,7 @@ def strPot_to_angle(strPot, potRange, pistonLengthRange, offsets, angleOffset):
   
   # Go from angle of triangle to angle from Dead Bug position
   adjustedJointAngle = jointAngle + angleOffset 
-  return adjutedJointAngle 
+  return adjustedJointAngle 
 
 def readAin(pinName, jointRange):
   raw = readInt(pinName)

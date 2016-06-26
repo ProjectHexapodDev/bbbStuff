@@ -61,7 +61,8 @@ def sensor():
         rospy.loginfo(radianAngle)
         
         msg = JointState() 
-        msg.position = radianAngle
+        msg.position = [radianAngle]
+        msg.name = ["stompy__fl__thigh_to_calf_upper"]
         pub.publish(msg)
         rate.sleep()
 
