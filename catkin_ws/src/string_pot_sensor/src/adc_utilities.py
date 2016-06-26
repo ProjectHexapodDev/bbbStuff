@@ -7,7 +7,6 @@ import logging
 import os
 from utilities import clamp, getPercentageIntoRange, readInt
 import logging
-import math
 
 log = logging.getLogger(__name__)
 
@@ -16,13 +15,11 @@ log = logging.getLogger(__name__)
  Map that value to an angle based on allowable range
  of pot value and angle for that joint
 """
-def strPot_to_angle(strPot, potRange, pistonLengthRange, offsets):
+def strPot_to_angle(strPot, potRange, angleRange):
   strPot = clamp(potRange, strPot) 
   potSpan = potRange[1] - potRange[0]
-  pistonLengthSpan = pistonLengthRange[1] - pistonLengthRange[0]
-  pistonLength = (((strPot - potRange[0]) * potSpan)/ pistonLengthSpan ) + pistonLengthRange[0]
-  # law of cosines
-  return math.acos((offsets[0]**2 + offsets[1]**2 - pistonLength**2)/(2 * offsets[0] * offsets[1])) 
+  angleSpan = angleRange[1] - angleRange[0]
+  angle = (((strPot - potRange[0]) * potSpan)/ angleSpan ) + angleRange[0] 
 
 def readAin(pinName, jointRange):
   raw = readInt(pinName)
