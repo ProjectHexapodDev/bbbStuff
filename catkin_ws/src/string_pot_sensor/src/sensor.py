@@ -65,9 +65,13 @@ def sensor():
         pub.publish(msg)
         rate.sleep()
 
+# Values pulled from Solidworks
 KNEE_POT_RANGE = (148, 934)
-KNEE_PISTON_RANGE = (10,30)
-KNEE_OFFSETS = (30, 5)
+KNEE_PISTON_RANGE = (20,32)
+KNEE_OFFSETS = (25.602, 7.439)
+THIGH_POT_RANGE = (93, 723)
+THIGH_PISTON_RANGE = (24,38)
+THIGH_OFFSETS = (10.216, 33.431)
 
 
 if __name__ == '__main__':
