@@ -65,7 +65,7 @@ def sensor():
         pub.publish(msg)
         rate.sleep()
 
-KNEE_POT_RANGE = (0, 4096)
+KNEE_POT_RANGE = (148, 934)
 KNEE_PISTON_RANGE = (10,30)
 KNEE_OFFSETS = (30, 5)
 
