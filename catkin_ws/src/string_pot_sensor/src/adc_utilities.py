@@ -16,14 +16,18 @@ log = logging.getLogger(__name__)
  Map that value to an angle based on allowable range
  of pot value and angle for that joint
 """
-def strPot_to_angle(strPot, potRange, pistonLengthRange, offsets):
+def strPot_to_angle(strPot, potRange, pistonLengthRange, offsets, angleOffset):
   #  import pdb; pdb.set_trace()
   strPot = clamp(potRange, strPot) 
   potSpan = potRange[1] - potRange[0]
   pistonLengthSpan = pistonLengthRange[1] - pistonLengthRange[0]
   pistonLength = (((strPot - potRange[0]) * pistonLengthSpan)/ potSpan ) + pistonLengthRange[0]
   # law of cosines
-  return math.acos((offsets[0]**2 + offsets[1]**2 - pistonLength**2)/(2 * offsets[0] * offsets[1])) 
+  jointAngle = math.acos((offsets[0]**2 + offsets[1]**2 - pistonLength**2)/(2 * offsets[0] * offsets[1]))
+  
+  # Go from angle of triangle to angle from Dead Bug position
+  adjustedJointAngle = jointAngle + angleOffset 
+  return adjutedJointAngle 
 
 def readAin(pinName, jointRange):
   raw = readInt(pinName)

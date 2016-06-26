@@ -57,7 +57,7 @@ def sensor():
         rawStringPot = readAin(AIN4, KNEE_RANGE)
         rospy.loginfo(rawStringPot)
 	
-        radianAngle = strPot_to_angle(rawStringPot, KNEE_POT_RANGE, KNEE_PISTON_RANGE, KNEE_OFFSETS)
+        radianAngle = strPot_to_angle(rawStringPot, KNEE_POT_RANGE, KNEE_PISTON_RANGE, KNEE_OFFSETS, KNEE_ANGLE_OFFSET)
         rospy.loginfo(radianAngle)
         
         msg = JointState() 
@@ -69,9 +69,11 @@ def sensor():
 KNEE_POT_RANGE = (148, 934)
 KNEE_PISTON_RANGE = (20,32)
 KNEE_OFFSETS = (25.602, 7.439)
+KNEE_ANGLE_OFFSET = -1.920
 THIGH_POT_RANGE = (93, 723)
 THIGH_PISTON_RANGE = (24,38)
 THIGH_OFFSETS = (10.216, 33.431)
+THIGH_ANGLE_OFFSET = -1.571
 
 
 if __name__ == '__main__':
