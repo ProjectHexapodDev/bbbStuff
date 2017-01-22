@@ -1,17 +1,17 @@
 <launch>
-  <machine name="console" address="console"  default="true" env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="console" address="console"  default="true" env-loader="$(find distributed_roslaunch)/src/env.sh" />
 
-  <machine name="engine_controller" address="engine_controller"  default="true" env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="engine_controller" address="engine_controller"  default="true" env-loader="$(find distributed_roslaunch)/src/env.sh" />
 
-  <machine name="leg1" address="leg1"  env-loader="$(find stompy_ros)/src/env.sh" />
-  <machine name="leg2" address="leg2"  env-loader="$(find stompy_ros)/src/env.sh" />
-  <machine name="leg3" address="leg3"  env-loader="$(find stompy_ros)/src/env.sh" />
-  <machine name="leg4" address="leg4"  env-loader="$(find stompy_ros)/src/env.sh" />
-  <machine name="leg5" address="leg5"  env-loader="$(find stompy_ros)/src/env.sh" />
-  <machine name="leg6" address="leg6"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="leg1" address="leg1"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="leg2" address="leg2"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="leg3" address="leg3"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="leg4" address="leg4"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="leg5" address="leg5"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="leg6" address="leg6"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
 
-  <machine name="hip1" address="hip1"  env-loader="$(find stompy_ros)/src/env.sh" />
-  <machine name="hip2" address="hip2"  env-loader="$(find stompy_ros)/src/env.sh" />
-  <machine name="hip3" address="hip3"  env-loader="$(find stompy_ros)/src/env.sh" />
+  <machine name="hip1" address="hip1"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="hip2" address="hip2"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="hip3" address="hip3"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
 
 </launch>

@@ -8,25 +8,25 @@ Environment variables:
 
 <launch>
     <!-- Set up the machine description -->
-    <include file="$(find stompy_ros)/launch/$(env ROBOT).machine" />
+    <include file="$(find distributed_roslaunch)/launch/$(env ROBOT).machine" />
 
     <!-- launch each leg --> 
-    <include file="$(find stompy_ros)/launch/leg.launch">
+    <include file="$(find distributed_roslaunch)/launch/leg.launch">
         <arg name="legname" value="leg1" />
     </include>
-    <include file="$(find stompy_ros)/launch/leg.launch">
+    <include file="$(find distributed_roslaunch)/launch/leg.launch">
         <arg name="legname" value="leg2" />
     </include>
-    <include file="$(find stompy_ros)/launch/leg.launch">
+    <include file="$(find distributed_roslaunch)/launch/leg.launch">
         <arg name="legname" value="leg3" />
     </include>
-    <include file="$(find stompy_ros)/launch/leg.launch">
+    <include file="$(find distributed_roslaunch)/launch/leg.launch">
         <arg name="legname" value="leg4" />
     </include>
-    <include file="$(find stompy_ros)/launch/leg.launch">
+    <include file="$(find distributed_roslaunch)/launch/leg.launch">
         <arg name="legname" value="leg5" />
     </include>
-    <include file="$(find stompy_ros)/launch/leg.launch">
+    <include file="$(find distributed_roslaunch)/launch/leg.launch">
         <arg name="legname" value="leg6" />
     </include>
 
