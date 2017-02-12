@@ -1,0 +1,15 @@
+<launch>
+  <machine name="console" address="localhost"  default="true" env-loader="$(find distributed_roslaunch)/src/env.sh" />
+
+<!-- 
+  <machine name="engine_controller" address="engine_controller"  default="true" env-loader="$(find distributed_roslaunch)/src/env.sh" />
+--> 
+
+  <machine name="fl" address="10.0.1.10"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="ml" address="10.0.1.11"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="rl" address="10.0.1.12"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="fr" address="10.0.1.13"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="mr" address="10.0.1.14"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+  <machine name="rr" address="10.0.1.15"  env-loader="$(find distributed_roslaunch)/src/env.sh" />
+
+</launch>
