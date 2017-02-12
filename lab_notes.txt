@@ -26,5 +26,13 @@ Next error:
 remote[10.0.1.14-4]: env: /home/stompy/stompy/bbbStuff_dev/catkin_ws/src/distributed_roslaunch/src/env.sh: No such file or directory
 
 
+Found this example of an env.sh file:
+#!/bin/sh
+
+export ROS_IP=192.168.0.20
+export ROS_MASTER_URI=http://localhost:11311
+export ROSLAUNCH_SSH_UNKNOWN=1
+. /home/alberto/at_robot_ws/devel/setup.sh
+exec "$@"
 
 
