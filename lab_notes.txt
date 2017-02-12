@@ -1,0 +1,30 @@
+---------------------------
+2/12/2017
+
+Trying to get roslaunch to launch distributed nodes
+
+Created boxbot machine file
+
+Run roslaunch:
+$ roslaunch distributed_roslaunch stompy_top.launch
+
+got error:
+"Incompatible ssh peer (no acceptable kex algorithm)"
+
+	Appears to be a paramiko issue. Paramiko is the python
+	library that Ubunto uses for ssh
+
+	Version of paramiko that ships with Ubuntu 14.04 doesn't
+	work with newer versions of ssh
+
+	Fixed by upgrading paramiko: 
+	sudo pip install paramiko --upgrade
+
+	solution at: http://answers.ros.org/question/250262/incompatible-ssh-peer-when-launching-a-remote-node/
+
+Next error:
+remote[10.0.1.14-4]: env: /home/stompy/stompy/bbbStuff_dev/catkin_ws/src/distributed_roslaunch/src/env.sh: No such file or directory
+
+
+
+

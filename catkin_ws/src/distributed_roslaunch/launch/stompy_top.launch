@@ -12,22 +12,22 @@ Environment variables:
 
     <!-- launch each leg --> 
     <include file="$(find distributed_roslaunch)/launch/leg.launch">
-        <arg name="legname" value="leg1" />
+        <arg name="legname" value="fl" />
     </include>
     <include file="$(find distributed_roslaunch)/launch/leg.launch">
-        <arg name="legname" value="leg2" />
+        <arg name="legname" value="ml" />
     </include>
     <include file="$(find distributed_roslaunch)/launch/leg.launch">
-        <arg name="legname" value="leg3" />
+        <arg name="legname" value="rl" />
     </include>
     <include file="$(find distributed_roslaunch)/launch/leg.launch">
-        <arg name="legname" value="leg4" />
+        <arg name="legname" value="fr" />
     </include>
     <include file="$(find distributed_roslaunch)/launch/leg.launch">
-        <arg name="legname" value="leg5" />
+        <arg name="legname" value="mr" />
     </include>
     <include file="$(find distributed_roslaunch)/launch/leg.launch">
-        <arg name="legname" value="leg6" />
+        <arg name="legname" value="rr" />
     </include>
 
 </launch>
