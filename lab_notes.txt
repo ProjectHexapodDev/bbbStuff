@@ -36,3 +36,15 @@ export ROSLAUNCH_SSH_UNKNOWN=1
 exec "$@"
 
 
+
+---------------------------
+3/5/2017
+
+Figured out how to run commands in parallel over multiple ssh connections:
+$ pssh -i -h ~/stompy-in-a-box_hosts.txt echo "hello"
+
+
+Trying to get ssh keys on each remote pi, and set them up to auto ssh into head
+That way I can pssh_stompybox and rsync to push out files
+
+Perhaps a git repo would be a better way
